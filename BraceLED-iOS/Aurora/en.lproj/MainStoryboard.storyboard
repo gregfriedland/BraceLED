@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tbI-KU-0wl">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="NKD-IS-CDd">
+            <objects>
+                <tableViewController id="tbI-KU-0wl" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="0Vk-gg-KTM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="78S-4v-afD">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="75" id="0q4-Yb-ver">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="LED Bracelet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="195" translatesAutoresizingMaskIntoConstraints="NO" id="YmZ-jJ-Yy1">
+                                                    <color key="backgroundColor" red="0.0" green="0.13725490868091583" blue="0.26666668057441711" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="KgS-gF-9pH"/>
+                                                        <constraint firstAttribute="width" constant="195" id="s3w-TY-zmT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="-1" height="-2"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amg-mZ-kBR">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="ogY-RL-HZI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btnScanForPeripherals:" destination="tbI-KU-0wl" eventType="touchUpInside" id="PSh-5V-5Hr"/>
+                                                    </connections>
+                                                </button>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="o6R-PA-ISX">
+                                                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.5490196078431373" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="amg-mZ-kBR" firstAttribute="centerY" secondItem="o6R-PA-ISX" secondAttribute="centerY" type="default" id="170-nG-aRN"/>
+                                            <constraint firstItem="YmZ-jJ-Yy1" firstAttribute="top" secondItem="0q4-Yb-ver" secondAttribute="top" constant="16" id="33t-fi-xDZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="amg-mZ-kBR" secondAttribute="trailing" constant="13" id="gJl-hm-wUl"/>
+                                            <constraint firstItem="YmZ-jJ-Yy1" firstAttribute="centerX" secondItem="0q4-Yb-ver" secondAttribute="centerX" type="default" id="h0I-Wc-GPw"/>
+                                            <constraint firstItem="amg-mZ-kBR" firstAttribute="top" secondItem="0q4-Yb-ver" secondAttribute="top" constant="20" type="default" id="rku-Fp-hG5"/>
+                                            <constraint firstItem="o6R-PA-ISX" firstAttribute="centerX" secondItem="amg-mZ-kBR" secondAttribute="centerX" type="default" id="yrw-ir-W4O"/>
+                                            <constraint firstItem="o6R-PA-ISX" firstAttribute="centerY" secondItem="0q4-Yb-ver" secondAttribute="centerY" type="default" id="zEn-kk-TAs"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="coU-24-k1K">
+                                        <rect key="frame" x="0.0" y="75" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxh-C7-NVo">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="105" id="199-Wc-bKE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Chase">
+                                                        <color key="titleColor" red="0.0" green="0.13725490868091583" blue="0.26666668057441711" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPQ-Qu-ltI">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="105" id="HLX-vW-7S8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Gradient">
+                                                        <color key="titleColor" red="0.0" green="0.13725490868091583" blue="0.26666668057441711" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="oxh-C7-NVo" firstAttribute="baseline" secondItem="OPQ-Qu-ltI" secondAttribute="baseline" type="default" id="3t1-EN-2vb"/>
+                                            <constraint firstAttribute="trailing" secondItem="OPQ-Qu-ltI" secondAttribute="trailing" constant="16" id="Hfd-oe-npc"/>
+                                            <constraint firstItem="oxh-C7-NVo" firstAttribute="leading" secondItem="coU-24-k1K" secondAttribute="leading" constant="16" id="KW5-gU-7Pc"/>
+                                            <constraint firstItem="OPQ-Qu-ltI" firstAttribute="centerY" secondItem="coU-24-k1K" secondAttribute="centerY" type="default" id="PaF-7H-qL9"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="Jf4-zF-tVI">
+                                        <rect key="frame" x="0.0" y="140" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Palette" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clY-dS-Jxt">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.32156863808631897" blue="0.45882353186607361" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="n2X-AV-4Yt">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="199" type="user" id="Ja6-Gj-d2h"/>
+                                                        <constraint firstAttribute="width" constant="199" id="kCT-aw-SK1"/>
+                                                    </constraints>
+                                                    <color key="minimumTrackTintColor" red="0.0" green="0.32156863808631897" blue="0.45882353186607361" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <color key="thumbTintColor" red="0.0" green="0.32156863808631897" blue="0.45882353186607361" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="paletteSliderDone:" destination="tbI-KU-0wl" eventType="touchUpInside" id="5H8-ni-ds0"/>
+                                                        <action selector="palleteSliderChanged:" destination="tbI-KU-0wl" eventType="valueChanged" id="3d3-6r-EuO"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="n2X-AV-4Yt" firstAttribute="centerY" secondItem="Jf4-zF-tVI" secondAttribute="centerY" type="default" id="A6k-EE-1c7"/>
+                                            <constraint firstItem="n2X-AV-4Yt" firstAttribute="leading" secondItem="Jf4-zF-tVI" secondAttribute="leading" constant="111" id="JxH-kh-chq"/>
+                                            <constraint firstItem="clY-dS-Jxt" firstAttribute="leading" secondItem="Jf4-zF-tVI" secondAttribute="leading" constant="10" id="Xhx-KQ-wNK"/>
+                                            <constraint firstItem="clY-dS-Jxt" firstAttribute="bottom" secondItem="n2X-AV-4Yt" secondAttribute="bottom" type="default" id="dgN-6h-gV5"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="Ixq-Uc-OQX">
+                                        <rect key="frame" x="0.0" y="205" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knl-bD-QII">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.32156863808631897" blue="0.45882353186607361" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hkt-Nk-cON">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="199" id="5mY-rM-0e4"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="199" type="user" id="Zi1-l1-5ma"/>
+                                                    </constraints>
+                                                    <color key="minimumTrackTintColor" red="0.0" green="0.32156863808631897" blue="0.45882353186607361" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <color key="thumbTintColor" red="0.0" green="0.32156863808631897" blue="0.45882353186607361" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="speedSliderChanged:" destination="tbI-KU-0wl" eventType="valueChanged" id="DXP-5h-4gZ"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="hkt-Nk-cON" firstAttribute="centerY" secondItem="Ixq-Uc-OQX" secondAttribute="centerY" type="default" id="9DR-lC-ugY"/>
+                                            <constraint firstItem="hkt-Nk-cON" firstAttribute="bottom" secondItem="knl-bD-QII" secondAttribute="bottom" type="default" id="JkE-rB-oPc"/>
+                                            <constraint firstItem="hkt-Nk-cON" firstAttribute="leading" secondItem="Ixq-Uc-OQX" secondAttribute="leading" constant="111" id="PJA-xo-AVm"/>
+                                            <constraint firstItem="knl-bD-QII" firstAttribute="leading" secondItem="Ixq-Uc-OQX" secondAttribute="leading" constant="10" id="TRI-tl-wSf"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="ZtP-HM-Uhi">
+                                        <rect key="frame" x="0.0" y="270" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="21S-Jz-Jbw">
+                                        <rect key="frame" x="0.0" y="335" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="29N-VK-n7R">
+                                        <rect key="frame" x="0.0" y="400" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="300" id="uUS-8P-y5U">
+                                        <rect key="frame" x="0.0" y="465" width="320" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="299"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="tbI-KU-0wl" id="2Oj-yz-j4L"/>
+                            <outlet property="delegate" destination="tbI-KU-0wl" id="TyN-MU-dof"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="EFE-F2-Lvh"/>
+                    <connections>
+                        <outlet property="btnConnect" destination="amg-mZ-kBR" id="dLG-RS-m2z"/>
+                        <outlet property="chaseBtn" destination="oxh-C7-NVo" id="T7P-kf-gWJ"/>
+                        <outlet property="gradientBtn" destination="OPQ-Qu-ltI" id="jRS-Dk-kCY"/>
+                        <outlet property="indConnecting" destination="o6R-PA-ISX" id="jbP-Rq-EgC"/>
+                        <outlet property="paletteLabel" destination="clY-dS-Jxt" id="d3n-Lg-GsM"/>
+                        <outlet property="paletteSlider" destination="n2X-AV-4Yt" id="tdQ-Je-Kw9"/>
+                        <outlet property="speedSlider" destination="hkt-Nk-cON" id="fS9-wD-iWC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8P-WY-CRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ogW-gU-Yd4"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="160"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnScanForPeripherals:"/>
+                <relationship kind="action" name="paletteSliderDone:" candidateClass="UISlider"/>
+                <relationship kind="action" name="palleteSliderChanged:" candidateClass="UISlider"/>
+                <relationship kind="action" name="speedSliderChanged:" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="alienBlobBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnConnect" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="bzrBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="chaseBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="colorCyclingSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="gradientBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="indConnecting" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="paletteLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="paletteSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="randomizeParamsBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="speedSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="tickerBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="touchView" candidateClass="TouchView"/>
+                <relationship kind="outlet" name="zoomSlider" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="TouchView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TouchView.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

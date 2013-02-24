@@ -1,0 +1,38 @@
+#include <Streaming.h>
+#include <SPI.h> 
+#include <ble.h>
+#include "Bluetooth.h"
+#include "ledBracelet.h"
+#include "Adafruit_WS2801.h"
+
+
+Bluetooth *bt;
+//Adafruit_WS2801 strip = Adafruit_WS2801(NUM_LEDS);
+Adafruit_WS2801 strip = Adafruit_WS2801(32, 2, 3);
+
+void setup() {
+  Serial.begin(57600);
+
+  strip.begin();
+  for (int i=0; i<NUM_LEDS; i++) {
+    strip.setPixelColor(i, 0,0,0);
+  }
+  strip.show();
+  delay(10);
+  
+  bt = new Bluetooth();
+  bt->start();
+  p("Setup done\n");
+}
+
+void loop() {
+  Packet *p = bt->loop();
+  if (p != NULL && p->msgLen == NUM_LEDS*3) {
+    DPRINT(p("Received packet\n");)
+    for (int i=0; i<NUM_LEDS; i++) {
+      strip.setPixelColor(i, p->data[i*3], p->data[i*3+1], p->data[i*3+2]);
+    }
+    strip.show();
+  } 
+  delay(10);
+}
